@@ -31,10 +31,10 @@ entrepreneurs.forEach(entrepreneur => {
 });
 
 //Sors une array qui contient le prénom et le nom des entrepreneurs ;
-console.log("Array de tous les entrepreneurs : ")
-let arrayEntrepreneurs = []
+console.log("Array de tous les entrepreneurs : ");
+let arrayEntrepreneurs = [] ;
 entrepreneurs.forEach(entrepreneur => {
-    arrayEntrepreneurs.push(`{ ${entrepreneur.first} , ${entrepreneur.last} }`)
+    arrayEntrepreneurs.push(`{ ${entrepreneur.first} , ${entrepreneur.last} }`);
 });
 
 console.log(arrayEntrepreneurs);
@@ -47,9 +47,9 @@ entrepreneurs.forEach(entrepreneur => {
 
 //Trie les entrepreneurs par ordre alphabétique du nom de famille.
 console.log("Entrepreneurs par ordre alphabétique : ");
-let arrayEntrepreneursAlpha = []
+let arrayEntrepreneursAlpha = [];
 entrepreneurs.forEach(entrepreneur => {
-    arrayEntrepreneursAlpha.push(`${entrepreneur.last}`)
+    arrayEntrepreneursAlpha.push(`${entrepreneur.last}`);
 });
 
 console.log(arrayEntrepreneursAlpha.sort());

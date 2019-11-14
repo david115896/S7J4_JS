@@ -4,9 +4,9 @@
 
 
 function isUpper(answer){
-    let result = ""
+    let result = "";
     for (let letter of answer) {
-        if (letter === letter.toLowerCase()){
+        if (letter === letter.toLowerCase() && (/[a-z]/).test(answer) ){
             result = false;
             break;
             }
@@ -15,7 +15,7 @@ function isUpper(answer){
         }
     };  
     return result;
-}
+};
 
 
 

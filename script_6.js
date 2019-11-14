@@ -12,19 +12,19 @@ const codes =[
 
 //console.log(codes);
 
-let test1 = "CCGUCGUUGCGCUACAGC"
-let test2 = "CCUCGCCGGUACUUCUCG"
+let test1 = "CCGUCGUUGCGCUACAGC";
+let test2 = "CCUCGCCGGUACUUCUCG";
 
 
 function codeGenetic (test) {
-    let testTampon = ""
-    let result = ""
+    let testTampon = "";
+    let result = "";
 
     for (let index = 0; index < test.length; index++) {
         if (index%3 == 0 && index !=0 && index!= test.length ) {
-            testTampon = testTampon + `-${test[index]}`
+            testTampon = testTampon + `-${test[index]}`;
         } else {
-            testTampon += test[index]
+            testTampon += test[index];
         }
     };
 
@@ -32,13 +32,13 @@ function codeGenetic (test) {
         if (result != "") { result += "-"};
         codes.forEach(code => {
             if (codon === code.title ){
-                result += code.prot
+                result += code.prot;
             }
         });
     });
-    console.log(`Voici la proteine du code genetique ${test} `)
-    console.log(result)
+    console.log(`Voici la proteine du code genetique ${test} `);
+    console.log(result);
 };
 
-codeGenetic(test1)
-codeGenetic(test2)
+codeGenetic(test1);
+codeGenetic(test2);

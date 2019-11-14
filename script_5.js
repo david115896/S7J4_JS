@@ -16,8 +16,8 @@ const books = [
     { title: 'Guerre et Paix', id: 748147, rented: 19 }
   ];
 
-console.log("Liste des livres ")
-console.log(books)
+console.log("Liste des livres :");
+console.log(books);
 
 
 //Est-ce que tous les livres ont été au moins empruntés une fois ?
@@ -33,13 +33,13 @@ Loop1: {
 };
 
 //Quel est livre le plus emprunté ?
-console.log("Quel est le livre le plus emprunte ? ")
-let arrayBooksRented = []
+console.log("Quel est le livre le plus emprunte ? ");
+let arrayBooksRented = [];
 books.forEach(book => {
-    arrayBooksRented.push(`${book.rented}`)
+    arrayBooksRented.push(`${book.rented}`);
 });
 
-let max = Math.max(...arrayBooksRented) 
+let max = Math.max(...arrayBooksRented) ;
 
 for (let index = 0; index < books.length; index++) {
     if (books[index].rented === max) {
@@ -49,8 +49,8 @@ for (let index = 0; index < books.length; index++) {
 };
 
 //Quel est le livre le moins emprunté ?
-console.log("Quel est le livre le moins emprunte ? ")
-let min = Math.min(...arrayBooksRented) 
+console.log("Quel est le livre le moins emprunte ? ");
+let min = Math.min(...arrayBooksRented) ;
 
 for (let index = 0; index < books.length; index++) {
     if (books[index].rented === min) {
@@ -60,7 +60,7 @@ for (let index = 0; index < books.length; index++) {
 };
 
 //Trouve le livre avec l'ID: 873495 ;
-console.log("Trouve le livre avec l'ID: 133712")
+console.log("Trouve le livre avec l'ID: 133712");
 
 for (let index = 0; index < books.length; index++) {
     if (books[index].id === 873495) {
@@ -70,12 +70,12 @@ for (let index = 0; index < books.length; index++) {
 };
 
 //Supprime le livre avec l'ID: 133712 ;
-console.log("Liste des livres sans l'ID: 133712)")
+console.log("Liste des livres sans l'ID: 133712)");
 
-let arrayBooksWithout133712 = []
+let arrayBooksWithout133712 = [];
 books.forEach(book => {
     if (book.id != 133712 ) {
-    arrayBooksWithout133712.push(book)
+    arrayBooksWithout133712.push(book);
     } else {
         console.log(`Le livre ${book.title} avec l'ID 133712 a ete retire de la liste`);
     }
@@ -84,23 +84,23 @@ books.forEach(book => {
 console.log(arrayBooksWithout133712);
 
 //Trie les livres par ordre alphabétique (sans celui avec l'ID 133712 car il est supprimé).
-console.log("Trie les livres par ordre alphabétique (sans celui avec l'ID 133712 car il est supprimé)")
+console.log("Trie les livres par ordre alphabétique (sans celui avec l'ID 133712 car il est supprimé)");
 
-let arrayBooksWithout133712Title = []
+let arrayBooksWithout133712Title = [];
 arrayBooksWithout133712.forEach(book => {
-    arrayBooksWithout133712Title.push(book.title)
+    arrayBooksWithout133712Title.push(book.title);
 });
 
-arrayBooksWithout133712Title = arrayBooksWithout133712Title.sort()
+arrayBooksWithout133712Title = arrayBooksWithout133712Title.sort();
 
-let arrayBooksWithout133712Alpha = []
+let arrayBooksWithout133712Alpha = [];
 
 for (let index = 0; index < books.length; index++) {
     arrayBooksWithout133712.forEach(book => {
         if (book.title === arrayBooksWithout133712Title[index]) {
-            arrayBooksWithout133712Alpha.push(book)
+            arrayBooksWithout133712Alpha.push(book);
         }
     });
 }
 
-console.log(arrayBooksWithout133712Alpha)
+console.log(arrayBooksWithout133712Alpha);
